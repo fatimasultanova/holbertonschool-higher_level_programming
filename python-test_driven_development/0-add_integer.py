@@ -20,6 +20,8 @@ def add_integer(a, b=98):
     try:
         a = int(a)
         b = int(b)
-    except OverflowError:
-        raise TypeError("a must be an integer")
+    except (OverflowError, ValueError):
+        if not isinstance(a, int):
+            raise TypeError("a must be an integer")
+        raise TypeError("b must be an integer")
     return a + b

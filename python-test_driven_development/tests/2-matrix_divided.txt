@@ -38,3 +38,26 @@ Error - matrix is not a list:
 Traceback (most recent call last):
     ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Division by Infinity (Bu hata aldığın kısımdı):
+>>> matrix_divided([[1, 2], [3, 4]], float('inf'))
+[[0.0, 0.0], [0.0, 0.0]]
+
+Missing Arguments (Argüman eksikliği testleri):
+>>> matrix_divided([[1, 2]])
+Traceback (most recent call last):
+    ...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+>>> matrix_divided()
+Traceback (most recent call last):
+    ...
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+Infinity inside matrix:
+>>> matrix_divided([[float('inf'), 1]], 1)
+[[inf, 1.0]]
+
+NaN inside matrix:
+>>> matrix_divided([[float('nan'), 1]], 1)
+[[nan, 1.0]]

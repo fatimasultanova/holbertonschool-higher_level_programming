@@ -8,15 +8,22 @@ How are you?
 Fine:
 <BLANKLINE>
 Bye
->>> text_indentation("Test.  Space? Yes: End")
+
+>>> text_indentation("Test.  With space? Yes: End")
 Test.
 <BLANKLINE>
-Space?
+With space?
 <BLANKLINE>
 Yes:
 <BLANKLINE>
 End
+
 >>> text_indentation(89)
 Traceback (most recent call last):
     ...
 TypeError: text must be a string
+
+>>> text_indentation()
+Traceback (most recent call last):
+    ...
+TypeError: text_indentation() missing 1 required positional argument: 'text'

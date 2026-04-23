@@ -66,17 +66,13 @@ class Square:
         self.__position = value
 
     def my_print(self):
-        """
-        Prints the square using the # character.
-        Considers position[1] as new lines and position[0] as leading spaces.
-        If size is 0, prints an empty line.
-        """
+        """Print square with # considering position"""
         if self.__size == 0:
             print()
             return
 
-        for i in range(self.__position[1]):
-            print("")
+        for _ in range(self.__position[1]):
+            print()
 
-        for i in range(self.__size):
+        for _ in range(self.__size):
             print(" " * self.__position[0] + "#" * self.__size)

@@ -25,6 +25,7 @@ class Square:
         """Retrieve position"""
         return self.__position
 
+
     @position.setter
     def position(self, value):
         """Set position with validation"""

@@ -6,7 +6,7 @@ The Square class is used to represent a geometric square shape.
 
 
 class Square:
-    """A class that defines a square. """
+    """A class that defines a square."""
 
     def __init__(self, size=0):
         """
@@ -24,7 +24,6 @@ class Square:
         Calculates and returns the current square area.
 
         Returns:
-             The area of the square (size squared).
+            The area of the square (size squared).
         """
-
         return self.__size * self.__size

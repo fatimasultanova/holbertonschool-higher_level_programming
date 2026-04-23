@@ -15,12 +15,8 @@ class Square:
             size (int): The size of the square side.
             position (tuple): The position of the square.
         """
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def area(self):
         """
@@ -72,7 +68,7 @@ class Square:
         If size is 0, prints an empty line.
         """
         if self.__size == 0:
-            print("")
+            print()
             return
 
         for i in range(self.__position[1]):

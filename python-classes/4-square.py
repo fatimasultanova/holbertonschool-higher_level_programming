@@ -47,3 +47,10 @@ class Square:
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
+
+    def my_print(self):
+        """Prints the current square area."""
+        for i in range(0, self.__size):
+            for j in range(0, self.__size):
+                print("#", end="")
+            print()

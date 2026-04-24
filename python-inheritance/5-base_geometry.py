@@ -3,6 +3,7 @@
 Geometry class created
 """
 
+
 class BaseGeometry:
     """Geometry class"""
     pass

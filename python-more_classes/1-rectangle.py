@@ -6,8 +6,6 @@ This module defines an empty class Square.
 
 class Rectangle:
     """Rectangle class is used to represent a geometric square shape."""
-
-
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -16,6 +14,7 @@ class Rectangle:
     def width(self):
         """Getting the width of the square."""
         return self.__width
+
     @property
     def height(self):
         """Getting the height of the square."""

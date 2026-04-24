@@ -93,8 +93,8 @@ class Rectangle:
         if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
         if rect_1.area() > rect_2.area():
-            return Rectangle(rect_1.width, rect_1.height)
+            return rect_1
         elif rect_2.area() == rect_1.area():
-            return Rectangle(rect_1.width, rect_1.height)
+            return rect_1
         else:
-            return Rectangle(rect_2.width, rect_2.height)
+            return rect_2

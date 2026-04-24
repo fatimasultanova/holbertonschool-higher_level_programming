@@ -5,9 +5,10 @@ This module defines an empty class Square.
 
 
 class Rectangle:
+    """Rectangle class is used to represent a geometric square shape."""
+
     number_of_instances = 0
 
-    """Rectangle class is used to represent a geometric square shape."""
     def __init__(self, width=0, height=0):
         Rectangle.number_of_instances += 1
         self.width = width

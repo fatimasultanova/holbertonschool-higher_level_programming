@@ -3,6 +3,8 @@
 It includes a function for writing text to a file in append mode, ensuring that
 the text is encoded in UTF-8.
 """
+
+
 def write_file(filename='', text=''):
     """
         Write text to a file

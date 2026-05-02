@@ -21,3 +21,7 @@ def add_item_to_list():
         items = []
     items.extend(sys.argv[1:])
     save_to_json_file(items, filename)
+
+
+if __name__ == "__main__":
+    add_item()

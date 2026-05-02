@@ -5,7 +5,7 @@ the text is encoded in UTF-8.
 """
 
 
-def write_file(filename='', text=''):
+def append_write(filename='', text=''):
     """
         Write text to a file
     Args:

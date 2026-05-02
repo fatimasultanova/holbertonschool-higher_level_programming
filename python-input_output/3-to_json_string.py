@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Provides functionality to convert a Python object to its JSON string representation.
+Convert a Python object to its JSON string representation.
 """
 import json
 

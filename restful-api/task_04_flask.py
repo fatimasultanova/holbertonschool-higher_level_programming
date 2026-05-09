@@ -46,7 +46,7 @@ def add_user():
         return jsonify({"error": "Username already exists"}), 409
 
     users[username] = data
-    return jsonify({"message": f"User {username} added successfully", "user": data}), 201
+    return jsonify(data)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)

@@ -33,7 +33,3 @@ def list_all_states():
 
     cursor.close()
     db.close()
-
-
-if __name__ == "__main__":
-    list_all_states()

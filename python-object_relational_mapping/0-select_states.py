@@ -1,21 +1,22 @@
 #!/usr/bin/python3
 """
-Lists all states from the database hbtn_0e_0_usa.
+This module provides a script that lists all states from the
+database hbtn_0e_0_usa using the MySQLdb module.
 """
 import sys
 import MySQLdb
 
 if __name__ == "__main__":
-    mysql_username = sys.argv[1]
-    mysql_password = sys.argv[2]
-    database_name = sys.argv[3]
+    username = sys.argv[1]
+    password = sys.argv[2]
+    db_name = sys.argv[3]
 
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
-        user=mysql_username,
-        passwd=mysql_password,
-        db=database_name
+        user=username,
+        passwd=password,
+        db=db_name
     )
 
     cursor = db.cursor()
@@ -23,7 +24,6 @@ if __name__ == "__main__":
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
 
     rows = cursor.fetchall()
-
     for row in rows:
         print(row)
 

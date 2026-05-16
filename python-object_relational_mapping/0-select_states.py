@@ -1,23 +1,26 @@
 #!/usr/bin/python3
 """
-This module provides a script that lists all states from the
-database hbtn_0e_0_usa using the MySQLdb module.
+Sənədləşdirmə (Documentation): Bu modul hbtn_0e_0_usa verilənlər bazasından
+bütün ştatları (states) ID ardıcıllığı ilə sıralayıb ekrana çıxarır.
 """
 import sys
 import MySQLdb
 
 
-if __name__ == "__main__":
-    username = sys.argv[1]
-    password = sys.argv[2]
-    db_name = sys.argv[3]
+def list_all_states():
+    """
+    Funksiya Sənədləşdirməsi: Verilənlər bazasına qoşulur və sorğunu icra edir.
+    """
+    mysql_username = sys.argv[1]
+    mysql_password = sys.argv[2]
+    database_name = sys.argv[3]
 
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
-        user=username,
-        passwd=password,
-        db=db_name
+        user=mysql_username,
+        passwd=mysql_password,
+        db=database_name
     )
 
     cursor = db.cursor()
@@ -30,3 +33,7 @@ if __name__ == "__main__":
 
     cursor.close()
     db.close()
+
+
+if __name__ == "__main__":
+    list_all_states()

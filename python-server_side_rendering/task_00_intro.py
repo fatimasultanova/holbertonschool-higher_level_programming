@@ -30,10 +30,9 @@ def generate_invitations(template, attendees):
             else:
                 val = str(val)
 
-
             processed_template = processed_template.replace(f"{{{placeholder}}}", val)
 
-        filename = f"python-server_side_rendering/output_{index}.txt"
+        filename = f"output_{index}.txt"
 
         try:
             with open(filename, 'w', encoding='utf-8') as file:

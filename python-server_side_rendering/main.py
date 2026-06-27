@@ -1,7 +1,12 @@
+import os
 from task_00_intro import generate_invitations
 
+current_dir = os.path.basename(os.getcwd())
+if current_dir != 'python-server_side_rendering' and os.path.exists('python-server_side_rendering'):
+    os.chdir('python-server_side_rendering')
+
 try:
-    with open('python-server_side_rendering/template.txt', 'r', encoding='utf-8') as file:
+    with open('template.txt', 'r', encoding='utf-8') as file:
         template_content = file.read()
 
     attendees = [
@@ -14,4 +19,4 @@ try:
     print("Process completed! You can check the output files.")
 
 except FileNotFoundError:
-    print("Error: 'python-server_side_rendering/template.txt' file not found. Please check the folder location.")
+    print("Error: 'template.txt' file not found.")
